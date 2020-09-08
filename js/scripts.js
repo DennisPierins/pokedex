@@ -1,3 +1,17 @@
-alert('Hello world');
-let favoriteFood = 'Lasagna alla bolognese';
-document.write(favoriteFood);
+let pokemonList = [
+  {
+    name: 'Bulbasaur',
+    height: 0.7,
+    type: ['Grass', 'Poison']
+  },
+  {
+    name: 'Ivysaur',
+    height: 1,
+    type: ['Grass', 'Poison']
+  },
+  {
+    name: 'Venusaur',
+    height: 2,
+    type: ['Grass', 'Poison']
+  }
+];
