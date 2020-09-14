@@ -1,4 +1,5 @@
-let pokemonList = [
+let pokemonRepository = (function () {
+  let pokemonList = [
   {
     name: 'Bulbasaur',
     height: 0.7,
@@ -16,10 +17,25 @@ let pokemonList = [
   }
 ];
 
-// Displays all pokemon with their respected heights; pokemon with heights higher than 1 display an extra message
-for (let i = 0; i < pokemonList.length; i++){
-  if (pokemonList[i].height > 1){
-    document.write(pokemonList[i].name + " " + "(height: " + pokemonList[i].height + ")" + " - Wow, that's big!" + "<br>" + "<br>")
-} else {document.write(pokemonList[i].name + " " + "(height: " + pokemonList[i].height + ")" + "<br>" + "<br>")
+function add(pokemon) {
+  pokemonList.push(pokemon);
 }
+
+function getAll() {
+  return pokemonList;
 }
+
+return {
+  add: add,
+  getAll: getAll
+};
+})();
+
+// Displays all pokemon with their respected heights & types - Pokemon with a height higher than 1 will receive an extra message
+pokemonRepository.getAll().forEach(function(pokemon) {
+  if(pokemon.height > 1){
+    document.write('<p>' + pokemon.name + ' ' + '(height: ' + pokemon.height + ') - Type: ' + pokemon.type + ' - Wow, that\'s big!' + '</p>');
+  }else{
+    document.write('<p>' + pokemon.name + ' ' + '(height: ' + pokemon.height + ') - Type: ' + pokemon.type + '</p>');
+  }
+});
