@@ -25,17 +25,35 @@ function getAll() {
   return pokemonList;
 }
 
+//Creates a list with buttons
+function addListItem(pokemon) {
+  let pokemonList = document.querySelector(".pokemonlist");
+  let listItem = document.createElement("li");
+  let button = document.createElement("button");
+  button.innerText = pokemon.name;
+  button.classList.add("button-class");
+  listItem.appendChild(button);
+  pokemonList.appendChild(listItem);
+//Makes the buttons clickable and shows the pokemon's name in console
+  button.addEventListener('click', function (event) {
+    showDetails(pokemon)
+  })
+}
+
+//Shows the pokemon's name in console
+function showDetails(pokemon) {
+  console.log(pokemon.name)
+}
+
 return {
   add: add,
-  getAll: getAll
+  getAll: getAll,
+  addListItem: addListItem,
+  showDetails: showDetails
 };
 })();
 
-// Displays all pokemon with their respected heights & types - Pokemon with a height higher than 1 will receive an extra message
-pokemonRepository.getAll().forEach(function(pokemon) {
-  if(pokemon.height > 1){
-    document.write('<p>' + pokemon.name + ' ' + '(height: ' + pokemon.height + ') - Type: ' + pokemon.type + ' - Wow, that\'s big!' + '</p>');
-  }else{
-    document.write('<p>' + pokemon.name + ' ' + '(height: ' + pokemon.height + ') - Type: ' + pokemon.type + '</p>');
-  }
+//Calls a function that displays a list with buttons for each pokemon name
+pokemonRepository.getAll().forEach(function(pokemon){
+  pokemonRepository.addListItem(pokemon);
 });
