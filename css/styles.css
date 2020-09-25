@@ -4,7 +4,7 @@ body {
 }
 
 .button-class {
-  background-color: #ffffff;
+  background-color: #e7e7e7;
   border: 2px solid #000000;
   color: #000000;
   padding: 16px 32px;
@@ -16,6 +16,8 @@ body {
   transition-duration: 0.4s;
   cursor: pointer;
   text-transform: uppercase;
+  border-radius: 4px;
+  width: 250px;
 }
 
 ul {
@@ -66,10 +68,20 @@ ul {
 
 .modal h1 {
   margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .modal p {
   margin-bottom: 0;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.modal img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #modal-container {
