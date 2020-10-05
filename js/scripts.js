@@ -68,7 +68,7 @@ let pokemonRepository = (function() {
         item.weight = details.weight;
         item.types = [];
         for (let i = 0; i < details.types.length; i++) {
-          item.types.push(details.types[i].type.name);
+          item.types.push(' ' + details.types[i].type.name);
         }
       })
       .catch(function(e) {
