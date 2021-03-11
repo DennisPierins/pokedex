@@ -4,7 +4,6 @@ pokedex is a small web application that loads data from an external API and enab
 
 ## Screenshot
 
-![Homepage](https://github.com/DennisPierins/pokedex/blob/master/img/pokedex-screenshot-main.PNG)
 ![Pokemondetails](https://github.com/DennisPierins/pokedex/blob/master/img/pokedex-screenshot.PNG)
 
 ## Technical details
