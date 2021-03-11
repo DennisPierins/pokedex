@@ -1,6 +1,6 @@
 # pokedex
 
-pokedex is a small web application that loads data from an external API and enables the viewing of data points in detail.
+pokedex is a small web application that loads data from an external API and enables the viewing of data points in detail. The user can click on any pokemon to view the details of the pokemon. Limited to the original 150 pokemon.
 
 ## Screenshot
 
