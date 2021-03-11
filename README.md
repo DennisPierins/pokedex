@@ -9,7 +9,7 @@ pokedex is a small web application that loads data from an external API and enab
 ## Technical details
 
 * HTML + CSS + JavaScript
-* Loads data from an external API
+* Loads data from an external API (https://pokeapi.co/api/v2/pokemon/?limit=150)
 * Displays a list of items loaded from that API
 * When clicking on a list item, pokedex enables the viewing of more details of that item
 * The JavaScript code is formatted according to ESLint rules
